@@ -1,0 +1,31 @@
+<body>
+  <main>
+    <div>
+      <h1>TODO List</h1>
+      <label for="filterToDo">a place to store your todos</label>
+      <form action="getTodo" class="toDoFilter">
+        <input type="text" id="filterToDo" placeholder="filter your todos" />
+      </form>
+      <ol>
+        <li
+          *ngFor="let Todo of toDoArray; index as i"
+          [ngClass]="{ isDone: Todo.isDone }"
+          [ngClass]="{ completed: Todo.isDone }"
+        >
+          <button class="complete">completed</button>
+          <p>{{ Todo.task }} {{ Todo.task.isDone }}</p>
+          <button class="x">X</button>
+        </li>
+      </ol>
+      <form action="addToDo" class="addToDo">
+        <input
+          type="text"
+          name="add"
+          id="add"
+          placeholder="add to your todo list..."
+        />
+        <button class="add">Add</button>
+      </form>
+    </div>
+  </main>
+</body>

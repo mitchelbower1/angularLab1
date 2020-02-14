@@ -1,0 +1,84 @@
+body {
+  position: static;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(right, #f857a6, #ff5858);
+  margin: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+div {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  width: 60vw;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#toDoFilter {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
+
+input {
+  margin-top: 5px;
+  padding-right: 82.5%;
+}
+
+ol {
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+  padding: 0;
+  counter-increment: inherit;
+}
+
+li {
+  margin: 0;
+  border-bottom: 1px solid grey;
+  display: flex;
+  align-items: center;
+}
+.complete {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  border-radius: 5px;
+  border: solid #f857a6;
+  color: #f857a6;
+  background-color: white;
+}
+
+.addToDo {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(right, #f857a6, #ff5858);
+  color: white;
+  border: none;
+}
+
+.x {
+  display: flex;
+}
