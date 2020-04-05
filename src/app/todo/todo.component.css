@@ -1,84 +1,64 @@
-body {
-  position: static;
-  height: 100vh;
+main {
   display: flex;
   justify-content: center;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
-  background: linear-gradient(right, #f857a6, #ff5858);
-  margin: 0;
+  margin: 20px 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  width: 75vw;
+}
+
+section * {
+  margin-bottom: 5px;
+}
+
+input,
+button {
+  font-size: 22px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+}
+
+.complete-btn {
+  color: #ff69b4;
+  border: 1px solid #ff69b4;
+  background-color: white;
+  padding: 2px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.task {
+  flex: 1;
 }
 
 .completed {
   text-decoration: line-through;
 }
 
-div {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: left;
-  width: 60vw;
-  margin: 20px;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-#toDoFilter {
-  display: flex;
-  flex-direction: row;
-  width: 100px;
-}
-
-input {
-  margin-top: 5px;
-  padding-right: 82.5%;
-}
-
-ol {
-  margin: 0;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: left;
-  padding: 0;
-  counter-increment: inherit;
-}
-
-li {
-  margin: 0;
-  border-bottom: 1px solid grey;
-  display: flex;
-  align-items: center;
-}
-.complete {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  border-radius: 5px;
-  border: solid #f857a6;
-  color: #f857a6;
-  background-color: white;
-}
-
-.addToDo {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-}
-
 .add {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background: linear-gradient(right, #f857a6, #ff5858);
+  background-color: #ff1493;
   color: white;
-  border: none;
 }
-
-.x {
-  display: flex;
-}
+/* Have a great day, whoever is reading this comment */
