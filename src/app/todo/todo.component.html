@@ -1,31 +1,36 @@
-<body>
-  <main>
-    <div>
-      <h1>TODO List</h1>
-      <label for="filterToDo">a place to store your todos</label>
-      <form action="getTodo" class="toDoFilter">
-        <input type="text" id="filterToDo" placeholder="filter your todos" />
-      </form>
-      <ol>
-        <li
-          *ngFor="let Todo of toDoArray; index as i"
-          [ngClass]="{ isDone: Todo.isDone }"
-          [ngClass]="{ completed: Todo.isDone }"
-        >
-          <button class="complete">completed</button>
-          <p>{{ Todo.task }} {{ Todo.task.isDone }}</p>
-          <button class="x">X</button>
-        </li>
-      </ol>
-      <form action="addToDo" class="addToDo">
-        <input
-          type="text"
-          name="add"
-          id="add"
-          placeholder="add to your todo list..."
-        />
-        <button class="add">Add</button>
-      </form>
-    </div>
-  </main>
-</body>
+<main>
+  <section>
+    <h1>TODO List</h1>
+    <p>A place to store your todos</p>
+    <form>
+      <input type="text" name="filterText" placeholder="Filter your to-dos" />
+    </form>
+    <ol>
+      <li *ngFor="let item of todos; index as i">
+        <div class="item-container">
+          <button
+            *ngIf="!item.completed"
+            (click)="completeTask(i)"
+            class="complete-btn"
+          >
+            Complete
+          </button>
+          <p class="task" [ngClass]="{ completed: item.completed }">
+            {{ item.task }}
+          </p>
+          <button>X</button>
+        </div>
+      </li>
+    </ol>
+    <form #addForm="ngForm" (ngSubmit)="addTodo(addForm)">
+      <input
+        type="text"
+        name="penguin"
+        placeholder="Add your to-do"
+        ngModel
+        required
+      />
+      <button class="add" [disabled]="addForm.invalid">Add</button>
+    </form>
+  </section>
+</main>
